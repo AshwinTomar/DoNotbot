@@ -424,4 +424,4 @@ async def change_status():
     await client.change_presence(activity=discord.Game(next(status)))
 
 keep_alive()
-client.run('NzQ1OTk3NDkwMTYzMDIzOTEy.Xz56TQ.Gk1Fg__N32W8mcGakT-tmuC2A-A')
+client.run('Your Token Here')
