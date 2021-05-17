@@ -82,6 +82,56 @@ async def _8ball(ctx, *, question):
     await ctx.send(t.random("anime cute"))
 
 
+    
+#Rock Paper Scissors Game    
+    
+
+
+@client.command()
+async def rsp(ctx,*,user_action):  
+    possible_actions = ["rock", "paper", "scissors"]
+    computer_action = random.choice(possible_actions)
+    await ctx.send(f"\ncomputer chose {computer_action}.\n")
+
+    if user_action == computer_action:
+        await ctx.send(f"Both players selected {user_action}. It's a tie!")
+        await ctx.send(t.random("try again"))
+    elif user_action == "r":
+        if computer_action == "scissors":
+            await ctx.send("Rock smashes scissors! You win!")
+            await ctx.send(t.random("anime dance"))
+        else:
+            await ctx.send("Paper covers rock! You lose.")
+            await ctx.send(t.random("anime cry"))
+    elif user_action == "p":
+        if computer_action == "rock":
+            await ctx.send("Paper covers rock! You win!")
+            await ctx.send(t.random("anime dance"))
+        else:
+            await ctx.send("Scissors cuts paper! You lose.")
+            await ctx.send(t.random("anime cry"))
+    elif user_action == "s":
+        if computer_action == "paper":
+            await ctx.send("Scissors cuts paper! You win!")
+            await ctx.send(t.random("anime dance"))
+        else:
+            await ctx.send("Rock smashes scissors! You lose.")
+            await ctx.send(t.random("anime cry"))
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 @client.command()
 async def trap(ctx):
     await ctx.send(t.random("anime traps"))
