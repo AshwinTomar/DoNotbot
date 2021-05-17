@@ -12,7 +12,7 @@ client = commands.Bot(command_prefix='&')
 
 # definition column
 translator = Translator()
-t = TenGiphPy.Tenor(token='41QVLZGFS5MZ')
+t = TenGiphPy.Tenor(token='Your Api Key')
 
 status = cycle(['Kids hunter 6969', 'flamethrower420'])
 
