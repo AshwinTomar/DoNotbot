@@ -1,7 +1,7 @@
 # DoNotbot
-#First discord bot i made, to practice python.
-#Feel free to use code
-#you will need to install following using command "pip install" :
+First discord bot i made, to practice python.
+Feel free to use code
+You will need to install following using command "pip install" :
 
 python==3.7
 
