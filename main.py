@@ -125,24 +125,22 @@ async def rsp(ctx,*,user_action):
     
     
     
-    
-    
-    
 #timzones
 @client.command()
 async def time(ctx,*,country):
-    if(country.lower=='singapore'):
-        now_utc=datetime.now(timezone('singapore'))
-        await ctx.send(now_utc.strftime('Asia/Singapore'))
-    elif (country.lower=='indonesia'):
-        now_utc=datetime.now(timezone('indonesia'))
-        await ctx.send(now_utc.strftime('Asia/Jakarta'))
-    elif (country.lower=='india'):
-        now_utc=datetime.now(timezone('india'))
-        await ctx.send(now_utc.strftime('Asia/Kolkata'))  
+    if(country=='singapore'):
+        now_singapore=datetime.now(timezone('singapore'))
+        await ctx.send(now_singapore.strftime(format))
+    elif (country=='indonesia'):
+        now_jakarta=datetime.now(timezone('asia/jakarta'))
+        await ctx.send(now_jakarta.strftime(format))
+    elif (country=='india'):
+        now_india=datetime.now(timezone('asia/kolkata'))
+        await ctx.send(now_india.strftime(format))  
+  
+ 
     
-    
-    
+
     
     
     
