@@ -8,6 +8,9 @@ import calendar
 import TenGiphPy
 from googletrans import Translator
 from keep_alive import keep_alive
+from datetime import datetime
+from pytz import timezone
+format = "Date: %Y-%m-%d \nTime : %H:%M:%S"
 client = commands.Bot(command_prefix='&')
 
 # definition column
@@ -125,7 +128,18 @@ async def rsp(ctx,*,user_action):
     
     
     
-    
+#timzones
+@client.command()
+async def time(ctx,*,country):
+    if(country.lower=='singapore'):
+        now_utc=datetime.now(timezone('singapore'))
+        await ctx.send(now_utc.strftime('Asia/Singapore'))
+    elif (country.lower=='indonesia'):
+        now_utc=datetime.now(timezone('indonesia'))
+        await ctx.send(now_utc.strftime('Asia/Jakarta'))
+    elif (country.lower=='india'):
+        now_utc=datetime.now(timezone('india'))
+        await ctx.send(now_utc.strftime('Asia/Kolkata'))  
     
     
     
